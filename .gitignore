@@ -216,3 +216,34 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Lab 21 — training artifacts (giữ repo nhẹ để push GitHub không vướng file lớn)
+# GitHub chặn file > 100 MB và cảnh báo > 50 MB. Bỏ qua các phần thừa/nặng,
+# CHỈ giữ adapter best-rank (r16) + CSV + loss_curve.png theo Submission Option A.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Submission ZIP để nộp LMS — KHÔNG push GitHub (416 MB, vượt giới hạn 100 MB/file)
+*.zip
+
+# Per Option A: chỉ nộp best rank (r16). Bỏ r8/r64 (số liệu đã có trong CSV).
+lab21_lora_t4/r8/
+lab21_lora_t4/r64/
+lab21_lora_t4/base_eval/
+
+# Intermediate checkpoints (trùng với adapter cuối, chứa optimizer state nặng)
+lab21_lora_t4/**/checkpoint-*/
+
+# Training state files (không cần để verify kết quả)
+lab21_lora_t4/**/*.pt
+lab21_lora_t4/**/*.pth
+lab21_lora_t4/**/*.bin
+
+# Bản sao tokenizer trong thư mục adapter (base model đã có sẵn — Option A bỏ qua)
+lab21_lora_t4/**/tokenizer.json
+lab21_lora_t4/**/tokenizer_config.json
+lab21_lora_t4/**/added_tokens.json
+lab21_lora_t4/**/special_tokens_map.json
+lab21_lora_t4/**/vocab.json
+lab21_lora_t4/**/merges.txt
+lab21_lora_t4/r16/README.md
