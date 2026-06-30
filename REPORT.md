@@ -1,7 +1,7 @@
 # Lab 21 — Evaluation Report
 
 **Học viên**: Võ Huyền Khánh Mây — 2A202600858
-**Submission option**: A (lightweight ZIP)
+**Submission option**: B (GitHub + HuggingFace Hub) — +5 bonus
 
 ---
 
@@ -14,7 +14,7 @@
 - **GPU**: Tesla T4, 15.6 GB VRAM (usable ~14.6 GB)
 - **Stack**: Unsloth 2026.6.9 · TRL 0.15.2 · Transformers 5.5.0 · PyTorch 2.11 (CUDA 12.8), `optim=adamw_8bit`, gradient checkpointing (unsloth), fp16 (T4 không hỗ trợ bf16)
 - **Training cost ước tính**: **$0.07** (tổng ~12.3 phút cho cả 3 rank @ $0.35/hr T4)
-
+- **HF Hub adapter (best rank r=16)**: https://huggingface.co/maykhanh004/qwen2.5-3b-vi-lab21-r16
 ---
 
 ## 2. Rank Experiment Results
